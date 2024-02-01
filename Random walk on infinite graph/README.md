@@ -6,10 +6,8 @@ Please refer to the following article for more information:
 (*i*) Vincent Bansaye, Geoffroy Berthelot, Amina El Bachari, Jean-René Chazottes, and Sylvain Billiard. Stochasticity in foraging explains large and invariant fluctuations in consumption rates within and across species (submitted)
 
 ## Preamble
-This program simulates random walks in an homogeneous graph (or lattice). The walker travels 
-
-which can be set to 0 
-
+This program simulates random walks in an homogeneous graph (or lattice). The walker travels throught edges and visits nodes. At each new (unvisited) node/site the walker pauses for duration $c$, which can be set to 0.
+The distance $y$ between two nodes 
 
 ## Usage
 1. Compil the C++ project using: ```make frsim``` (see 'makefile' and 'makefile.complete')
