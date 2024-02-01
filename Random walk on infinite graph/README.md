@@ -41,7 +41,13 @@ Examples of correct JSON configuration files are:
 ```
 {"ncores":"3","n_sims":"10000","dim_lattice":"2","end_time":"100000000000","walk_speed":"1","walk_handling_time":"0.1","size_lattice":"1000","Xs":"100","power_law_gamma":"2.5","power_law_xmin":"1","power_law_xmax":"10","p_drift":"0.1","p_perco":"0.5"}
 ```
-or  
+(one graph/lattice density value ```Xs```)
+```
+{"ncores":"30","n_sims":"100000","dim_lattice":"2","end_time":"1000000","walk_speed":"1","walk_handling_time":"0.1","size_lattice":"1000","Xs":["961","2500","10000","4900","400","225"],"power_law_gamma":"3.5","power_law_xmin":"1","power_law_xmax":"10","p_drift":"0.1","p_perco":"0.5"}
+```
+(mulitple graph/lattice density values ```Xs```)
 
 ## Additional hardcoded parameters
 
+
+## Technical notes:
