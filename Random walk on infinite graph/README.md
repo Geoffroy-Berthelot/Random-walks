@@ -1,9 +1,15 @@
 # Random walk on infinite graph in 1, 2 or 3 dimensions
-This is the C++ code used for simulating random walks in 1, 2 or 3 dimensional graph or latttices using CPUs only.
+This is the C++ code used for simulating random walks in 1, 2 or 3 dimensional graph (or latttices) using CPUs only.
 
 Please refer to the following article for more information:
 
 (*i*) Vincent Bansaye, Geoffroy Berthelot, Amina El Bachari, Jean-René Chazottes, and Sylvain Billiard. Stochasticity in foraging explains large and invariant fluctuations in consumption rates within and across species (submitted)
+
+## Preamble
+This program simulates random walks in an homogeneous graph (or lattice). The walker travels 
+
+which can be set to 0 
+
 
 ## Usage
 1. Compil the C++ project using: ```make frsim``` (see 'makefile' and 'makefile.complete')
@@ -48,6 +54,14 @@ Examples of correct JSON configuration files are:
 (mulitple graph/lattice density values ```Xs```)
 
 ## Additional hardcoded parameters
+The following parameters are hardcoded in the 'Config_type.hpp' header file:
+* ```bigInt``` : the specific (unsigned) type of the variable which holds the index of a node. This can be huge, depending on the simulation time for example.
+* ```cInt``` : the specific (signed) type of the variable which holds the (integer) coordinate of a node (in the Z subset).
+* ```output_precision``` : the precision of the numeric values written in the filename
+* ```N0_1D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 1 dimension. 
+* ```N0_2D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 2 dimensions.
+* ```N0_3D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 3 dimensions.
+Bear in mind that these values can have a strong impact for running time performance.
 
 
 ## Technical notes:
