@@ -1,12 +1,12 @@
 # Random walk on infinite graph in 1, 2 or 3 dimensions
-This is the C++ code used for simulating random walks in 1, 2 or 3 dimensional graph (or latttices) using CPUs only.
+This is the C++ code used for simulating random walks in 1, 2 or 3 dimensional graph (or latttice) using CPUs only.
 
 Please refer to the following article for more information:
 
 (*i*) Vincent Bansaye, Geoffroy Berthelot, Amina El Bachari, Jean-René Chazottes, and Sylvain Billiard. Stochasticity in foraging explains large and invariant fluctuations in consumption rates within and across species (submitted)
 
 ## Preamble
-This program simulates random walks in an homogeneous graph (or lattice) of dimension $d \in \\{1, 2, 3 \\}$. 
+This code simulates random walks in an homogeneous graph (or lattice) of dimension $d \in \\{1, 2, 3 \\}$. 
 The walker walks throught edges at speed $v$ and visits nodes/sites. At each new (unvisited) node/site the walker pauses for duration $c$, which can be set to 0.
 The distance $y$ between two nodes is defined as $y = L / ( x^{1/d} -1 )$ where $L$ is the size of the graph, and $x$ the 'density' (or number of nodes in the graph at $t=0$).
 The time taken to travel throught an edge is $\Delta = y / v$.
@@ -17,7 +17,7 @@ The time taken to travel throught an edge is $\Delta = y / v$.
 A matlab file 'gen_json.mat' is provided to help generate a proper JSON file.
 3. Make sure a results/ folder is already created before launching the simulations.
 4. Run the simulations of random walks using: ```./frsim ./your_configuration_file``` for non-perturbated random walks.  
-Perturbated random walk can also be simulated using:  
+Perturbated random walks can also be simulated using:  
 ```./frsim ./your_configuration_file -drift``` will make a random walk with a drift, according to the drift parameter $p_d$  
 ```./frsim ./your_configuration_file -jumps``` a random walk with jumps, where jumps are drawn from a discrete and truncated power-law distribution with parameter $\gamma$  
 ```./frsim ./your_configuration_file -memory``` the walker have a memory, and will avoid the last visited site  
