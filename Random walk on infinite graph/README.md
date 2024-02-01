@@ -60,6 +60,7 @@ The following parameters are hardcoded in the 'Config_type.hpp' header file:
 * ```N0_1D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 1 dimension. 
 * ```N0_2D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 2 dimensions.
 * ```N0_3D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 3 dimensions.
+
 Bear in mind that these values can have a strong impact for running time performance.
 
 ## Technical notes:
