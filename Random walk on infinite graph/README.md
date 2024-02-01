@@ -1,5 +1,5 @@
 # Random walk on infinite graph in 1, 2 or 3 dimensions
-This is the C++ code used for simulating random walks in 1, 2 or 3 dimensional graph (or latttice) using CPUs only.
+This is the C++ code used for simulating random walks on a 1, 2 or 3 dimensional graph (or latttice) using CPUs only.
 
 Please refer to the following article for more information:
 
