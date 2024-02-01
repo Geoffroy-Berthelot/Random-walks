@@ -42,7 +42,6 @@ travelling time $\Delta$ through a node,
 * ```p_drift```: the value of drift $p_d$
 * ```p_perco```: the value of percolation $p$
 
-
 Examples of correct JSON configuration files are:
 ```
 {"ncores":"3","n_sims":"10000","dim_lattice":"2","end_time":"100000000000","walk_speed":"1","walk_handling_time":"0.1","size_lattice":"1000","Xs":"100","power_law_gamma":"2.5","power_law_xmin":"1","power_law_xmax":"10","p_drift":"0.1","p_perco":"0.5"}
@@ -62,7 +61,6 @@ The following parameters are hardcoded in the 'Config_type.hpp' header file:
 * ```N0_2D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 2 dimensions.
 * ```N0_3D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 3 dimensions.
 Bear in mind that these values can have a strong impact for running time performance.
-
 
 ## Technical notes:
 * requires C++14
