@@ -11,7 +11,7 @@ Please refer to the following article for more information:
 A matlab file 'gen_json.mat' is provided to help generate a proper JSON file.
 3. Make sure a results/ folder is already created before launching the simulations.
 4. Run the simulations of random walks using: ```./frsim ./your_configuration_file``` for non-perturbated random walks.  
-Perturbations can be used:  
+Perturbated random walk can also be simulated using:  
 ```./frsim ./your_configuration_file -drift``` will make a random walk with a drift, according to the drift parameter $p_d$  
 ```./frsim ./your_configuration_file -jumps``` a random walk with jumps, where jumps are drawn for power-law distribution with parameter $\gamma$  
 ```./frsim ./your_configuration_file -memory``` the walker have a memory, and will avoid the last visited site  
