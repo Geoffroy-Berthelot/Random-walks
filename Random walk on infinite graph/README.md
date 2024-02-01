@@ -56,7 +56,7 @@ Examples of correct JSON configuration files are:
 ## Additional hardcoded parameters
 The following parameters are hardcoded in the 'Config_type.hpp' header file:
 * ```bigInt``` : the specific (unsigned) type of the variable which holds the index of a node. This can be huge, depending on the simulation time for example.
-* ```cInt``` : the specific (signed) type of the variable which holds the (integer) coordinate of a node (in the Z subset).
+* ```cInt``` : the specific (signed) type of the variable which holds the (integer) coordinate of a node (in the $Z^d$ subset).
 * ```output_precision``` : the precision of the numeric values written in the filename
 * ```N0_1D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 1 dimension. 
 * ```N0_2D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 2 dimensions.
