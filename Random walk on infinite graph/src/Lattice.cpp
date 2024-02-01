@@ -60,7 +60,7 @@ void Lattice::percolate_init( std::mt19937_64 &engine ) {
     // (see 'Config_types.hpp')
     for( bigInt p=0; p < nodes; p++ ) {
         if( rand_p(engine) < p_perco )
-            is_visited[p] = '1'; //set to '1', consider it as already been visited (=empty)
+            is_visited[p] = '1'; //set to '1', consider it has already been visited (=empty)
     }
 }
 
