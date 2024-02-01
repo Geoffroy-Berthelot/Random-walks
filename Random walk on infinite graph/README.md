@@ -6,7 +6,7 @@ Please refer to the following article for more information:
 (*i*) Vincent Bansaye, Geoffroy Berthelot, Amina El Bachari, Jean-René Chazottes, and Sylvain Billiard. Stochasticity in foraging explains large and invariant fluctuations in consumption rates within and across species (submitted)
 
 ## Preamble
-This program simulates random walks in an homogeneous graph (or lattice) of dimension $d \in `\{ 1, 2, 3 \}`$. 
+This program simulates random walks in an homogeneous graph (or lattice) of dimension $d \in \\{1, 2, 3 \\}$. 
 The walker walks throught edges at speed $v$ and visits nodes/sites. At each new (unvisited) node/site the walker pauses for duration $c$, which can be set to 0.
 The distance $y$ between two nodes is defined as $y = L / ( X^{1/d} -1 )$ where $L$ is the size of the graph, and $X$ the 'density' (or number of nodes in the graph at $t=0$).
 The time taken to travel throught an edge is $\Delta = $.
