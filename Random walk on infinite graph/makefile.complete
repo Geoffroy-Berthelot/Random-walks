@@ -1,0 +1,47 @@
+IDIR = include
+ODIR = obj
+SRCDIR = src
+CC = gcc
+
+# Compilation parameters:
+#CXXFLAGS = -I$(IDIR) -Wall -std=c++14 -O3 -lstdc++ -lm -fopenmp -fno-stack-protector 
+CXXFLAGS = -I$(IDIR) -Wall -std=c++14 -O3 -lstdc++ -lm -fopenmp
+
+# Defines shared base dependances and objects ------------------
+BASE_DEPS := FRsim_base.hpp FRsim.hpp Config_params.hpp Config_types.hpp Walker.hpp Tools.hpp Lattice.hpp Lattice_spiral.hpp Lattice_baseconversion.hpp Power_law.hpp
+BASE_OBJ := main_FRsim.o FRsim_base.o FRsim.o FRsim_drift.o Walker.o Tools.o Lattice.o Lattice_spiral.o Lattice_baseconversion.o Power_law.o
+
+# Defines variables for ==FRsim== (1,2,3-dimensional random walk) ------------------
+$(info ====> Defining DEPS and OBJ for: 1,2,3-dimensional random walk, no perturbations)
+
+# Additional models (drift, etc.):
+_DEPS := FRsim_drift.hpp FRsim_jumps.hpp FRsim_memory.hpp FRsim_perco.hpp $(BASE_DEPS)
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+$(info DEPS = $(DEPS))
+
+# Additional models (drift, etc.):
+_OBJ := FRsim_drift.o FRsim_jumps.o FRsim_memory.o FRsim_percolation.o $(BASE_OBJ)
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+$(info OBJ=$(OBJ))
+
+$(ODIR)/%.o: $(SRCDIR)/%.cpp $(DEPS)
+	$(CC) -c -o $@ $< $(CXXFLAGS)
+
+$(info ====> Compiling FRsim files (including perturbations))
+all: frsim
+
+$(define targets)
+frsim : $(OBJ) 
+	$(CC) -o $@ $^ $(CXXFLAGS)
+
+
+
+
+
+
+
+
+
+
