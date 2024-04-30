@@ -61,10 +61,10 @@ The following parameters are hardcoded in the 'Config_type.hpp' header file:
 * ```N0_2D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 2 dimensions.
 * ```N0_3D``` : The number of nodes of the initial (at time $t=0$) of the graph/lattice in 3 dimensions.
 
-Bear in mind that these values can have a strong impact for running time performance.
+Bear in mind that these values can have a strong impact on running time performance.
 
 ## Technical notes:
 * requires C++14
 * the memory is implemented in a loosy way, where we only keep the past direction (instead of position), and avoid repeating the complementary one. 
 This can be improved by implementing a memory to the Walker Class, for instance a vector containing a sequence of the immediate past (visited) $n$ positions.
-One should note that if $n$ is large (depending on the dimension) then the walker can get 'stuck' or 'surrounded' between past visited positions, preventing it from moving (as the walk with memory avoids memorised positions).
+One should note that if $n$ is large (depending on the dimension) then the walker can get 'stuck' or 'surrounded' between past visited positions, preventing it from moving (as the walk with memory avoids memorized positions).
