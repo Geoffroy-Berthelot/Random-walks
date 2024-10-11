@@ -22,7 +22,7 @@ Power_law::Power_law(const unsigned a, const unsigned b, const double gamma_)
     // fill val array with desired values:
     for (unsigned i = 0; i < S; i++)
         val[i] = p++;
-
+    
     // 1) Estimate of the normalisation coefficient C:
     // C_{a,b,\gamma}= \sum_{i=a}^b i^{-\gamma}:
     C = 0.0;
@@ -42,8 +42,8 @@ Power_law::Power_law(const unsigned a, const unsigned b, const double gamma_)
 }
     
 Power_law::~Power_law(){
-    free(B1);
     free(val);
+    free(B1);
 }
 
 //------------------------------------------------------------------------------
@@ -51,18 +51,18 @@ Power_law::~Power_law(){
 unsigned Power_law::rand( const double r ) const{
     // Draw one random unsigned integer using U_j ~ U[0,1] that falls into the intervals of B1 array:
     
-    // We search for the index of rand(u) in B1 array:
-    unsigned idx = 0;
-    while( r > B1[idx] ) {
-        idx++;
-    }
-    
-    if(idx == 0)
+    // Check boundaries first:
+    if( r <= B1[0] ) // also accounts for r = 0;
         return val[0];
     else
-        if( idx > S )
+        if( r >= B1[S-1] )
             return val[S-1];
-        else
+        else {
+            // otherwise proceed normally:
+            unsigned idx = 0;
+            while( r > B1[idx] )
+                idx++;
             return val[idx-1];
+        }
 }
 
